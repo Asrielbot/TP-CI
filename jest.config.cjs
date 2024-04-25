@@ -15,5 +15,11 @@ module.exports = {
     // '^uuid$': '<rootDir>/node_modules/uuid/dist/index.js',
     "^uuid$": require.resolve("uuid"),
   },
-  reporters: ["default", "jest-junit"],
+  reporters: [
+    "default",
+    [
+      "jest-junit",
+      { outputDirectory: "test_results", outputName: "junit.xml" },
+    ],
+  ],
 };
