@@ -1,6 +1,7 @@
 // Importations nécessaires avec CommonJS
 const request = require("supertest");
 const app = require("../backend/server"); // Assurez-vous que cela pointe vers votre fichier serveur correctement configuré
+let server;
 
 beforeAll((done) => {
   server = app.listen(5001, () => {
