@@ -3,7 +3,7 @@ const bodyParser = require("body-parser");
 const cors = require("cors");
 const app = express();
 
-const port = process.env.PORT || 5001;
+const port = process.env.PORT || 5000;
 app.use(cors());
 app.use(bodyParser.json());
 
@@ -27,8 +27,8 @@ app.post("/contacts", (req, res) => {
   res.status(201).send(newContact);
 });
 
-app.listen(port, () => {
-  console.log(`Server running on port ${port}`);
-});
+// app.listen(port, () => {
+//   console.log(`Server running on port ${port}`);
+// });
 
 module.exports = app;
